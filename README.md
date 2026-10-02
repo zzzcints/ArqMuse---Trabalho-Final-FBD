@@ -32,7 +32,7 @@ O projeto foi desenvolvido no contexto da disciplina de **Banco de Dados**, pass
 
 O banco de dados é baseado no seguinte modelo conceitual:
 
-> ![Modelo Entidade-Relacionamento](modeloER.png)
+> ![Modelo Entidade-Relacionamento](BD_arqmuse/modeloER.png)
 
 O modelo contém as seguintes entidades:
 
