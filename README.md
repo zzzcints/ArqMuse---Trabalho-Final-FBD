@@ -37,7 +37,6 @@ O banco de dados é baseado no seguinte modelo conceitual:
 
 ## Tecnologias
 
-- **MySQL** — Sistema de gerenciamento do banco de dados;
 - **SQL** — Linguagem utilizada para criação e manipulação dos dados;
 - **Visual Studio Code** — Ambiente de desenvolvimento;
 - **Git e GitHub** — Controle de versão e armazenamento do projeto.
