@@ -1,18 +1,67 @@
-## Getting Started
+# ArqMuse
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Sistema de gerenciamento de acervos e exposições de museus.
 
-## Folder Structure
+## Sobre o projeto
 
-The workspace contains two folders by default, where:
+O **ArqMuse** é um projeto de banco de dados desenvolvido para auxiliar na gestão de acervos e exposições de museus. O sistema busca centralizar e organizar informações relacionadas às obras, autores, coleções, proprietários, exposições, restaurações e movimentações.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O projeto foi desenvolvido no contexto da disciplina de **Banco de Dados**, passando pelas etapas de modelagem conceitual e implementação do banco de dados.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Objetivos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Modelar a estrutura de um banco de dados para gerenciamento de acervos;
+- Organizar e manter a integridade dos dados;
+- Permitir o cadastro e gerenciamento de obras;
+- Gerenciar autores e proprietários;
+- Controlar coleções e exposições;
+- Registrar restaurações realizadas nas obras;
+- Acompanhar o histórico de movimentações das obras.
 
-## Dependency Management
+## Funcionalidades
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Cadastro e gerenciamento de obras/objetos;
+- Cadastro e gerenciamento de autores;
+- Cadastro de proprietários;
+- Gerenciamento de coleções;
+- Cadastro e gerenciamento de exposições;
+- Registro de restaurações;
+- Registro de movimentações das obras.
+
+## Modelo Entidade-Relacionamento
+
+O banco de dados é baseado no seguinte modelo conceitual:
+
+> ![Modelo Entidade-Relacionamento](modeloER.png)
+
+O modelo contém as seguintes entidades:
+
+- **Autor** — armazena informações sobre os autores das obras;
+- **Obra** — representa os objetos pertencentes ao acervo;
+- **Coleção** — organiza as obras em coleções;
+- **Proprietário** — registra pessoas ou instituições relacionadas à propriedade das obras;
+- **Exposição** — registra as exposições realizadas;
+- **Restauração** — registra intervenções de restauração realizadas nas obras;
+- **Movimentação** — registra o deslocamento das obras;
+- **Local** — representa os locais relacionados às obras e às movimentações.
+
+## Tecnologias
+
+- **MySQL** — Sistema de gerenciamento do banco de dados;
+- **SQL** — Linguagem utilizada para criação e manipulação dos dados;
+- **Visual Studio Code** — Ambiente de desenvolvimento;
+- **Git e GitHub** — Controle de versão e armazenamento do projeto.
+
+## Estrutura do projeto
+
+```text
+ArqMuse/
+├── README.md
+├── sql/
+│   ├── 01_create_database.sql
+│   ├── 02_create_tables.sql
+│   ├── 03_insert_data.sql
+│   └── 04_queries.sql
+├── docs/
+│   └── modelo_er.png
+└── ...
