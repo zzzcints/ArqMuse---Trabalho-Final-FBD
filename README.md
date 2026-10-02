@@ -32,18 +32,8 @@ O projeto foi desenvolvido no contexto da disciplina de **Banco de Dados**, pass
 
 O banco de dados é baseado no seguinte modelo conceitual:
 
-> ![Modelo Entidade-Relacionamento](BD_arqmuse/modeloER.png)
+> ![Modelo Entidade-Relacionamento](BD_arqmuse/ER.png)
 
-O modelo contém as seguintes entidades:
-
-- **Autor** — armazena informações sobre os autores das obras;
-- **Obra** — representa os objetos pertencentes ao acervo;
-- **Coleção** — organiza as obras em coleções;
-- **Proprietário** — registra pessoas ou instituições relacionadas à propriedade das obras;
-- **Exposição** — registra as exposições realizadas;
-- **Restauração** — registra intervenções de restauração realizadas nas obras;
-- **Movimentação** — registra o deslocamento das obras;
-- **Local** — representa os locais relacionados às obras e às movimentações.
 
 ## Tecnologias
 
