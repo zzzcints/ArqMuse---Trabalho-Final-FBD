@@ -5,25 +5,33 @@ import java.sql.Statement;
 
 public class App {
     public static void main(String[] args) {
-        // Altere "localhost" se o banco estiver em outro servidor
-        // Mude o usuário e coloque a senha que você definiu na instalação do MySQL
-        String url = "jdbc:mysql://localhost:3306/";
-        String usuario = "arqmuse"; 
-        String senha = "ufc6548"; // ⚠️ coloque a senha do seu MySQL aqui!
+        // PostgreSQL roda por padrão na porta 5432
+        // A URL agora utiliza a sintaxe 'jdbc:postgresql'
+        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String usuario = "postgres"; // Usuário padrão do PostgreSQL
+        String senha = "ufc6548"; // ⚠️ Coloque a senha que você definiu para o PostgreSQL
 
-        System.out.println("Tentando conectar ao banco de dados...");
+        System.out.println("Tentando conectar ao banco de dados PostgreSQL...");
 
-        try (Connection conexao = DriverManager.getConnection(url, usuario, senha);
-             Statement statement = conexao.createStatement()) {
-            
-            System.out.println("Conexão estabelecida com sucesso!");
-            
-            // Executa um comando para ler a versão do banco instalado
-            ResultSet resultSet = statement.executeQuery("SELECT VERSION()");
-            if (resultSet.next()) {
-                System.out.println("Versão do MySQL: " + resultSet.getString(1));
+        try {
+            // (Opcional no Java moderno, mas garante o registro do driver)
+            Class.forName("org.postgresql.Driver");
+
+            try (Connection conexao = DriverManager.getConnection(url, usuario, senha);
+                 Statement statement = conexao.createStatement()) {
+                
+                System.out.println("Conexão estabelecida com sucesso!");
+                
+                // No PostgreSQL, a função para pegar a versão é LOWERCASE: version()
+                ResultSet resultSet = statement.executeQuery("SELECT version();");
+                if (resultSet.next()) {
+                    System.out.println("Versão do PostgreSQL: " + resultSet.getString(1));
+                }
+
             }
-
+        } catch (ClassNotFoundException e) {
+            System.out.println("Erro: Driver JDBC do PostgreSQL não foi encontrado na pasta lib/!");
+            e.printStackTrace();
         } catch (Exception e) {
             System.out.println("Erro ao conectar: " + e.getMessage());
             e.printStackTrace();
