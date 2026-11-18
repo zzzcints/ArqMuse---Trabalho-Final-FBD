@@ -66,9 +66,6 @@ ORDER BY r.custo DESC;
 -- CONSULTA 7: Histórico de movimentação das obras
 -- ============================================
 
-Histórico de movimentação das obras
-
-Apresenta as movimentações realizadas, identificando a obra, o local de origem, o local de destino, o motivo e o responsável pelo transporte.
 
 SELECT o.titulo,
        lo.nome AS local_origem,
