@@ -1,8 +1,7 @@
 
 
 -- ==========================================
--- PROJETO: GESTAO DE OBRAS DE ARTE
--- PostgreSQL 18
+-- PROJETO: ARQ_MUSE
 -- ==========================================
 
 -- 1. AUTOR
